@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="text-center"><u>All Content</u> <a class='btn btn-primary' href='/main/home/'><i class="fa fa-plus"></i></a></h2><br>            
+    <table class="table table-dark table-striped">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile No.</th>
+            <th>Notification Time</th>
+            <th>Created At</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- jinja2 Technique -->
+        {% for obj in queryset %}
+        <tr>
+            <td>{{obj.first_name}}</td>
+            <td>{{obj.last_name}}</td>
+            <td>{{obj.mobile}}</td>
+            <td>{{obj.notification_time}}</td>
+            <td>{{obj.created_at}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a class='btn btn-primary'  href='/main/home/'>Create New</a>
+</div>
+{% endblock content %}

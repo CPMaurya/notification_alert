@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock title %}
+
+{% block content %}
+<h2 class='text-center'><u>Notification</u></h2>
+<p class="lead">
+    <div class="shadow-box m-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="p-3">
+                    <div class='col-sm-6 col-sm-offset-3'>
+                        <form method='POST' action='.'> {% csrf_token %}
+                            {{ form.as_p }}
+                            <input class='btn btn-primary' type='submit' value='Submit' >
+                            <a class='btn btn-default'  href='/main/'>Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</p>
+{% endblock content %}

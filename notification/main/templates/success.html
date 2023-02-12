@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% endblock title %}
+
+{% block content %}
+<div class='text-center'>
+    <h2><u>Success</u></h2>
+    <p>Dear {{created.first_name}}, You have reaceive a missed call on 
+        {{created.mobile}} at - {{created.notification_time}} 
+        Thank You!
+    </p>
+    <a class='btn btn-default'  href='/main/home/'>Create New</a>
+    <a class='btn btn-default'  href='/main/'>Show All Content</a>
+</div>
+{% endblock content %}
