@@ -5,8 +5,8 @@ from datetime import datetime
 
 
 def schedule_message_whatapp(to_number, payload, send_at):
-    account_sid = "AC9679dbfdbb48fdd3309dd3fde20dc279"  # please change it to your own
-    auth_token = "a798a22ad93c6495522013410a878c33"  # please change it to your own
+    account_sid = "*****************************"  # please change it to your own
+    auth_token = "*****************************"  # please change it to your own
     client = Client(account_sid, auth_token)
 
     year = int(send_at.strftime("%Y"))
@@ -30,8 +30,8 @@ def schedule_message_whatapp(to_number, payload, send_at):
 
 
 def schedule_call(to_number, first_name):
-    account_sid = "AC9679dbfdbb48fdd3309dd3fde20dc279"  # please change it to your own
-    auth_token = "a798a22ad93c6495522013410a878c33"  # please change it to your own
+    account_sid = "******************************"  # please change it to your own
+    auth_token = "*********************************"  # please change it to your own
     client = Client(account_sid, auth_token)
 
     voice_note = "Hello {} this is reminder call, Thank You".format(first_name)
